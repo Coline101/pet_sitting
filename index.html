@@ -1,57 +1,62 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bordeaux Pet Sitting - Garde d'animaux à domicile</title>
-    <meta name="description" content="Service professionnel de pet sitting à Bordeaux. Garde d'animaux à mon domicile, promenades, soins et affection pour vos compagnons.">
-    <meta name="keywords" content="pet sitting bordeaux, garde animaux bordeaux, dog sitting bordeaux, cat sitting bordeaux, garde chiens bordeaux, garde chats bordeaux">
+    <title>Romalyn's - Premium Ube from the Philippines</title>
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Reset et styles de base */
+        :root {
+            --anthracite: #333333;
+            --dark-purple: #6D4169;
+            --light-purple: #C7BEE2;
+            --white: #ffffff;
+        }
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
+            font-family: 'MuseoModerno', sans-serif;
+            color: var(--anthracite);
+            background-color: var(--white);
             line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
         }
         
         .container {
-            width: 90%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 15px;
+            padding: 0 20px;
         }
         
-        /* Header et Navigation */
+        /* Header */
         header {
-            background-color: #2c5530;
-            color: white;
-            padding: 1rem 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
         
-        .header-container {
+        .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 20px 0;
         }
         
         .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--dark-purple);
+            text-decoration: none;
         }
         
-        .logo i {
-            margin-right: 10px;
-            font-size: 2rem;
+        .logo span {
+            color: var(--anthracite);
         }
         
         nav ul {
@@ -60,632 +65,439 @@
         }
         
         nav ul li {
-            margin-left: 1.5rem;
+            margin-left: 30px;
         }
         
         nav ul li a {
-            color: white;
             text-decoration: none;
+            color: var(--anthracite);
             font-weight: 500;
             transition: color 0.3s;
         }
         
         nav ul li a:hover {
-            color: #a8d5ba;
-        }
-        
-        .mobile-menu {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
+            color: var(--dark-purple);
         }
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(44, 85, 48, 0.8), rgba(44, 85, 48, 0.8)), url('https://source.unsplash.com/random/1200x800/?pet,dog') no-repeat center center/cover;
-            color: white;
+            background: linear-gradient(135deg, var(--dark-purple) 0%, var(--light-purple) 100%);
+            color: var(--white);
+            padding: 100px 0;
             text-align: center;
-            padding: 5rem 1rem;
         }
         
         .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 600;
         }
         
         .hero p {
-            font-size: 1.2rem;
+            font-size: 20px;
             max-width: 700px;
-            margin: 0 auto 2rem;
+            margin: 0 auto 30px;
         }
         
         .btn {
             display: inline-block;
-            background-color: #a8d5ba;
-            color: #2c5530;
+            background-color: var(--white);
+            color: var(--dark-purple);
             padding: 12px 30px;
-            border-radius: 5px;
+            border-radius: 30px;
             text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s;
+            font-weight: 600;
+            transition: all 0.3s;
         }
         
         .btn:hover {
-            background-color: #8bc4a1;
+            background-color: var(--anthracite);
+            color: var(--white);
         }
         
-        /* Sections */
-        section {
-            padding: 4rem 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-            color: #2c5530;
-            position: relative;
-        }
-        
-        .section-title:after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 3px;
-            background: #a8d5ba;
-            margin: 10px auto;
-        }
-        
-        /* Services */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .service-card {
-            background: white;
-            border-radius: 8px;
-            padding: 2rem;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .service-icon {
-            font-size: 2.5rem;
-            color: #2c5530;
-            margin-bottom: 1rem;
-        }
-        
-        .service-card h3 {
-            margin-bottom: 1rem;
-            color: #2c5530;
-        }
-        
-        /* À propos */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            display: flex;
             align-items: center;
+            gap: 50px;
         }
         
-        .about-text h3 {
-            margin-bottom: 1rem;
-            color: #2c5530;
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         
         .about-image img {
             width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            height: auto;
+            display: block;
         }
         
-        /* Tarifs */
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+        .about-content {
+            flex: 1;
         }
         
-        .pricing-card {
-            background: white;
-            border-radius: 8px;
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            position: relative;
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: var(--dark-purple);
         }
         
-        .popular {
-            border: 2px solid #a8d5ba;
-            transform: scale(1.05);
+        .tagline {
+            font-style: italic;
+            margin-bottom: 30px;
+            color: var(--anthracite);
+            font-size: 18px;
         }
         
-        .popular-tag {
-            position: absolute;
-            top: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #a8d5ba;
-            color: #2c5530;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: bold;
+        /* Products Section */
+        .products {
+            padding: 100px 0;
+            background-color: #f9f9f9;
         }
         
-        .price {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #2c5530;
-            margin: 1rem 0;
-        }
-        
-        .price span {
-            font-size: 1rem;
-            color: #777;
-        }
-        
-        .pricing-features {
-            list-style: none;
-            margin: 1.5rem 0;
-        }
-        
-        .pricing-features li {
-            margin-bottom: 0.5rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-        
-        .pricing-features li:before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #2c5530;
-            font-weight: bold;
-        }
-        
-        /* Témoignages */
-        .testimonials {
-            background-color: #f0f7f2;
-        }
-        
-        .testimonials-grid {
+        .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            gap: 30px;
+            margin-top: 50px;
         }
         
-        .testimonial-card {
-            background: white;
-            border-radius: 8px;
-            padding: 2rem;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
-        
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 1rem;
-        }
-        
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-        }
-        
-        .author-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: #ddd;
-            margin-right: 1rem;
+        .product-card {
+            background-color: var(--white);
+            border-radius: 10px;
             overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
         }
         
-        .author-info h4 {
-            margin-bottom: 0.2rem;
+        .product-card:hover {
+            transform: translateY(-10px);
         }
         
-        .author-info p {
-            color: #777;
-            font-size: 0.9rem;
-        }
-        
-        /* Contact */
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-        }
-        
-        .contact-info h3 {
-            margin-bottom: 1rem;
-            color: #2c5530;
-        }
-        
-        .contact-details {
-            margin-bottom: 2rem;
-        }
-        
-        .contact-item {
+        .product-image {
+            height: 250px;
+            background-color: var(--light-purple);
             display: flex;
             align-items: center;
-            margin-bottom: 1rem;
+            justify-content: center;
         }
         
-        .contact-icon {
-            margin-right: 1rem;
-            color: #2c5530;
-            font-size: 1.2rem;
+        .product-content {
+            padding: 20px;
         }
         
-        .contact-form input,
-        .contact-form textarea {
+        .product-title {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: var(--dark-purple);
+        }
+        
+        .product-price {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        /* Cooking Classes */
+        .classes {
+            padding: 100px 0;
+        }
+        
+        .classes-content {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .classes-text {
+            flex: 1;
+        }
+        
+        .classes-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .classes-image img {
             width: 100%;
-            padding: 12px;
-            margin-bottom: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
+            height: auto;
+            display: block;
         }
         
-        .contact-form textarea {
-            height: 150px;
-            resize: vertical;
+        .highlight {
+            background-color: var(--light-purple);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        
+        /* Location */
+        .location {
+            padding: 100px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .location-content {
+            display: flex;
+            gap: 50px;
+        }
+        
+        .location-info {
+            flex: 1;
+        }
+        
+        .location-map {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .location-map iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 300px;
+            border: none;
+        }
+        
+        .hours {
+            margin-top: 20px;
         }
         
         /* Footer */
         footer {
-            background-color: #2c5530;
-            color: white;
-            padding: 3rem 0 1rem;
+            background-color: var(--anthracite);
+            color: var(--white);
+            padding: 60px 0 30px;
         }
         
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
         }
         
         .footer-column h3 {
-            margin-bottom: 1.5rem;
-            font-size: 1.2rem;
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--light-purple);
         }
         
-        .footer-links {
+        .footer-column ul {
             list-style: none;
         }
         
-        .footer-links li {
-            margin-bottom: 0.8rem;
+        .footer-column ul li {
+            margin-bottom: 10px;
         }
         
-        .footer-links a {
-            color: #a8d5ba;
+        .footer-column ul li a {
+            color: var(--white);
             text-decoration: none;
             transition: color 0.3s;
         }
         
-        .footer-links a:hover {
-            color: white;
+        .footer-column ul li a:hover {
+            color: var(--light-purple);
         }
         
-        .social-links {
+        .payment-methods {
             display: flex;
-            gap: 1rem;
+            gap: 15px;
+            margin-top: 20px;
         }
         
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            color: white;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-        
-        .social-links a:hover {
-            background-color: #a8d5ba;
+        .payment-methods img {
+            height: 30px;
         }
         
         .copyright {
             text-align: center;
-            padding-top: 2rem;
+            padding-top: 30px;
             border-top: 1px solid rgba(255,255,255,0.1);
-            font-size: 0.9rem;
-            color: #a8d5ba;
         }
         
         /* Responsive */
         @media (max-width: 768px) {
-            .header-container {
+            .header-content {
                 flex-direction: column;
                 text-align: center;
             }
             
-            .logo {
-                margin-bottom: 1rem;
-            }
-            
             nav ul {
-                flex-direction: column;
+                margin-top: 20px;
+                justify-content: center;
             }
             
             nav ul li {
-                margin: 0.5rem 0;
-            }
-            
-            .mobile-menu {
-                display: block;
-                position: absolute;
-                top: 1rem;
-                right: 1rem;
+                margin: 0 10px;
             }
             
             .hero h1 {
-                font-size: 2rem;
+                font-size: 36px;
             }
             
-            .about-content,
-            .contact-container {
-                grid-template-columns: 1fr;
+            .about, .classes-content, .location-content {
+                flex-direction: column;
             }
             
-            .popular {
-                transform: none;
+            .about-image, .classes-image, .location-map {
+                margin-bottom: 30px;
             }
         }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Header -->
     <header>
-        <div class="container header-container">
-            <div class="logo">
-                <i class="fas fa-paw"></i>
-                <span>Bordeaux Pet Sitting</span>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">Romalyn<span>'s</span></a>
+                <nav>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#classes">Cooking Classes</a></li>
+                        <li><a href="#location">Location</a></li>
+                    </ul>
+                </nav>
             </div>
-            <div class="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#a-propos">À propos</a></li>
-                    <li><a href="#tarifs">Tarifs</a></li>
-                    <li><a href="#temoignages">Témoignages</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="accueil">
+    <section class="hero">
         <div class="container">
-            <h1>Garderie pour animaux à Bordeaux</h1>
-            <p>Je garde vos chiens et chats à mon domicile, dans un environnement chaleureux et sécurisé. Promenades, jeux, câlins et soins adaptés à chaque animal.</p>
-            <a href="#contact" class="btn">Réserver une garde</a>
+            <h1>Premium Ube from the Philippines</h1>
+            <p>Discover the exotic, visually stunning, and naturally made Filipino ingredient designed to inspire Parisian food lovers.</p>
+            <a href="#products" class="btn">Shop Now</a>
         </div>
     </section>
 
-    <!-- Services -->
-    <section id="services">
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">Mes Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3>Garde à mon domicile</h3>
-                    <p>Votre animal est accueilli dans ma maison spacieuse avec jardin sécurisé à Bordeaux. Environnement familial et chaleureux.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-dog"></i>
-                    </div>
-                    <h3>Promenades quotidiennes</h3>
-                    <p>Plusieurs sorties par jour dans les parcs de Bordeaux. Adaptées à l'âge, la taille et l'énergie de votre animal.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3>Soins et affection</h3>
-                    <p>Beaucoup d'attention et de câlins. Administration de médicaments si nécessaire et suivi personnalisé.</p>
-                </div>
+            <div class="about-image">
+                <!-- Placeholder for product image -->
+                <img src="https://via.placeholder.com/600x400/6D4169/FFFFFF?text=Romalyn's+Ube+Jar" alt="Romalyn's Ube Jar">
             </div>
-        </div>
-    </section>
-
-    <!-- À propos -->
-    <section id="a-propos">
-        <div class="container">
-            <h2 class="section-title">À propos de moi</h2>
             <div class="about-content">
-                <div class="about-text">
-                    <h3>Amoureuse des animaux depuis toujours</h3>
-                    <p>Je m'appelle Marie et je suis passionnée par les animaux. Après plusieurs années à travailler en tant qu'assistante vétérinaire, j'ai décidé de me consacrer entièrement à la garde d'animaux.</p>
-                    <p>Je vis dans une maison spacieuse avec un jardin clos et sécurisé dans un quartier calme de Bordeaux. J'accueille vos compagnons comme s'ils étaient les miens, avec beaucoup d'amour et d'attention.</p>
-                    <p>Je suis formée aux premiers secours animaliers et peux administrer des médicaments si nécessaire. Je propose des mises à jour régulières avec photos pour vous rassurer pendant votre absence.</p>
-                </div>
-                <div class="about-image">
-                    <!-- Image illustrative -->
-                    <div style="width:100%; height:300px; background-color:#e0e0e0; border-radius:8px; display:flex; align-items:center; justify-content:center;">
-                        <i class="fas fa-user" style="font-size:4rem; color:#888;"></i>
-                    </div>
-                </div>
+                <h2 class="section-title">Our Story</h2>
+                <p class="tagline">"Made with passion, dedication, and love"</p>
+                <p>Romalyn's brings the authentic taste of the Philippines to Paris with our premium Ube. Sourced directly from Filipino farms, our Ube is carefully selected and processed to preserve its natural flavor and vibrant color.</p>
+                <p>Our commitment to quality and authenticity makes Romalyn's the perfect choice for food enthusiasts seeking novelty, creativity, and genuine Filipino flavors.</p>
             </div>
         </div>
     </section>
 
-    <!-- Tarifs -->
-    <section id="tarifs">
+    <!-- Products Section -->
+    <section id="products" class="products">
         <div class="container">
-            <h2 class="section-title">Mes Tarifs</h2>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Garde Journée</h3>
-                    <div class="price">25€ <span>/ jour</span></div>
-                    <ul class="pricing-features">
-                        <li>Garderie de 8h à 19h</li>
-                        <li>3 promenades quotidiennes</li>
-                        <li>Nourriture fournie par le propriétaire</li>
-                        <li>Photos et updates</li>
-                    </ul>
-                    <a href="#contact" class="btn">Réserver</a>
-                </div>
-                <div class="pricing-card popular">
-                    <div class="popular-tag">Le plus populaire</div>
-                    <h3>Garde avec Nuitée</h3>
-                    <div class="price">35€ <span>/ 24h</span></div>
-                    <ul class="pricing-features">
-                        <li>Garderie 24h/24</li>
-                        <li>Nuitée incluse</li>
-                        <li>Promenades adaptées</li>
-                        <li>Soins et médicaments si besoin</li>
-                        <li>Photos et updates réguliers</li>
-                    </ul>
-                    <a href="#contact" class="btn">Réserver</a>
-                </div>
-                <div class="pricing-card">
-                    <h3>Forfait Week-end</h3>
-                    <div class="price">60€ <span>/ week-end</span></div>
-                    <ul class="pricing-features">
-                        <li>Du vendredi 18h au dimanche 18h</li>
-                        <li>Promenades quotidiennes</li>
-                        <li>Environnement familial</li>
-                        <li>Updates réguliers</li>
-                    </ul>
-                    <a href="#contact" class="btn">Réserver</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Témoignages -->
-    <section class="testimonials" id="temoignages">
-        <div class="container">
-            <h2 class="section-title">Témoignages</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Marie a gardé mon labrador pendant une semaine. Il était tellement bien qu'il ne voulait plus rentrer à la maison ! Des updates quotidiens avec photos, je recommande vivement."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <!-- Avatar placeholder -->
-                            <div style="width:100%; height:100%; background-color:#ccc; display:flex; align-items:center; justify-content:center;">
-                                <i class="fas fa-user" style="color:#777;"></i>
-                            </div>
-                        </div>
-                        <div class="author-info">
-                            <h4>Sophie L.</h4>
-                            <p>Bordeaux Centre</p>
-                        </div>
+            <h2 class="section-title">Our Products</h2>
+            <p>Discover our premium Ube jam, available in different sizes and through various channels.</p>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <!-- Placeholder for product image -->
+                        <img src="https://via.placeholder.com/300x250/6D4169/FFFFFF?text=250g+Jar" alt="250g Ube Jar">
                     </div>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Je confie régulièrement mes deux chats à Marie. Elle est attentive à leurs besoins spécifiques et leur administre leurs médicaments. Je pars l'esprit tranquille."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <!-- Avatar placeholder -->
-                            <div style="width:100%; height:100%; background-color:#ccc; display:flex; align-items:center; justify-content:center;">
-                                <i class="fas fa-user" style="color:#777;"></i>
-                            </div>
-                        </div>
-                        <div class="author-info">
-                            <h4>Thomas M.</h4>
-                            <p>Bordeaux Caudéran</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Service exceptionnel ! Mon chien est timide mais il s'est tout de suite senti à l'aise chez Marie. Le jardin est parfait pour qu'il puisse jouer en sécurité."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <!-- Avatar placeholder -->
-                            <div style="width:100%; height:100%; background-color:#ccc; display:flex; align-items:center; justify-content:center;">
-                                <i class="fas fa-user" style="color:#777;"></i>
-                            </div>
-                        </div>
-                        <div class="author-info">
-                            <h4>Claire D.</h4>
-                            <p>Bordeaux Bastide</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title">Contactez-moi</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Prendre rendez-vous</h3>
-                    <p>N'hésitez pas à me contacter pour discuter des besoins de votre animal ou pour réserver une garde.</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div>
-                                <h4>Adresse</h4>
-                                <p>Bordeaux, Quartier Calme</p>
-                                <p>(Adresse précise communiquée après réservation)</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div>
-                                <h4>Téléphone</h4>
-                                <p>05 56 XX XX XX</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div>
-                                <h4>Email</h4>
-                                <p>contact@bordeaux-petsitting.fr</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-google"></i></a>
+                    <div class="product-content">
+                        <h3 class="product-title">Premium Ube Jam</h3>
+                        <p class="product-price">€13.50 – €15.00</p>
+                        <p>Our signature 250g jar of premium Ube jam, perfect for baking, cooking, or simply enjoying on toast.</p>
                     </div>
                 </div>
                 
-                <div class="contact-form">
-                    <form>
-                        <input type="text" placeholder="Votre nom" required>
-                        <input type="email" placeholder="Votre email" required>
-                        <input type="tel" placeholder="Votre téléphone">
-                        <input type="text" placeholder="Type d'animal (chien, chat...)">
-                        <textarea placeholder="Votre message (dates de garde, besoins spécifiques...)"></textarea>
-                        <button type="submit" class="btn">Envoyer</button>
-                    </form>
+                <div class="product-card">
+                    <div class="product-image">
+                        <!-- Placeholder for product image -->
+                        <img src="https://via.placeholder.com/300x250/C7BEE2/333333?text=Ube+Ingredients" alt="Ube Ingredients">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Ube Baking Kit</h3>
+                        <p class="product-price">€25.00</p>
+                        <p>Everything you need to create authentic Filipino Ube desserts at home, including our premium Ube jam and recipe cards.</p>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <!-- Placeholder for product image -->
+                        <img src="https://via.placeholder.com/300x250/6D4169/FFFFFF?text=Gift+Set" alt="Ube Gift Set">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Ube Gift Set</h3>
+                        <p class="product-price">€35.00</p>
+                        <p>The perfect introduction to Filipino flavors, featuring our Ube jam and other traditional ingredients in an elegant gift box.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cooking Classes -->
+    <section id="classes" class="classes">
+        <div class="container">
+            <h2 class="section-title">Ube Cooking Classes</h2>
+            
+            <div class="classes-content">
+                <div class="classes-text">
+                    <p>Immerse yourself in the world of Ube with our hands-on cooking classes. Learn to create traditional Filipino desserts and modern interpretations under the guidance of our expert chefs.</p>
+                    
+                    <div class="highlight">
+                        <h3>Special Offer</h3>
+                        <p>Add just €10 to your jar purchase for access to our exclusive cooking class. Limited availability with only 3 sessions per week.</p>
+                    </div>
+                    
+                    <p>Our classes are designed for small groups to ensure a personalized, high-quality experience where you'll learn the secrets of working with Ube.</p>
+                    
+                    <a href="#location" class="btn">Book a Class</a>
+                </div>
+                
+                <div class="classes-image">
+                    <!-- Placeholder for cooking class image -->
+                    <img src="https://via.placeholder.com/600x400/C7BEE2/333333?text=Cooking+Class" alt="Ube Cooking Class">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location -->
+    <section id="location" class="location">
+        <div class="container">
+            <h2 class="section-title">Visit Our Shop</h2>
+            
+            <div class="location-content">
+                <div class="location-info">
+                    <p>Come visit us at our beautiful Marais location to experience the full range of Romalyn's products and immerse yourself in Filipino culture.</p>
+                    
+                    <address>
+                        <strong>Romalyn's Ube</strong><br>
+                        155 Rue de Turenne<br>
+                        Paris, Marais 3rd<br>
+                        France
+                    </address>
+                    
+                    <div class="hours">
+                        <h3>Opening Hours</h3>
+                        <p>Monday - Friday: 9am – 7pm</p>
+                        <p>Saturday - Sunday: Closed</p>
+                    </div>
+                    
+                    <p>Also available at select Monoprix locations throughout Paris.</p>
+                </div>
+                
+                <div class="location-map">
+                    <!-- Google Maps embed -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.373395392119!2d2.366215315674661!3d48.86192807928807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1b7eb6b8a5%3A0x4b3b8a5c0b5b0b5c!2s155%20Rue%20de%20Turenne%2C%2075003%20Paris%2C%20France!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
@@ -696,48 +508,47 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>Bordeaux Pet Sitting</h3>
-                    <p>Service professionnel de garde d'animaux à domicile à Bordeaux. Votre animal entre de bonnes mains.</p>
+                    <h3>Romalyn's</h3>
+                    <p>Premium Ube from the Philippines, bringing authentic Filipino flavors to Paris.</p>
                 </div>
+                
                 <div class="footer-column">
-                    <h3>Liens rapides</h3>
-                    <ul class="footer-links">
-                        <li><a href="#accueil">Accueil</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#tarifs">Tarifs</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#products">Our Products</a></li>
+                        <li><a href="#classes">Cooking Classes</a></li>
+                        <li><a href="#location">Visit Us</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-column">
                     <h3>Contact</h3>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-phone"></i> 05 56 XX XX XX</li>
-                        <li><i class="fas fa-envelope"></i> contact@bordeaux-petsitting.fr</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Bordeaux, France</li>
+                    <ul>
+                        <li>155 Rue de Turenne, Paris</li>
+                        <li>Marais 3rd</li>
+                        <li>info@romalyns-ube.com</li>
+                        <li>+33 1 23 45 67 89</li>
                     </ul>
                 </div>
+                
+                <div class="footer-column">
+                    <h3>Payment Methods</h3>
+                    <p>We accept all major payment methods:</p>
+                    <div class="payment-methods">
+                        <!-- Payment method icons -->
+                        <img src="https://via.placeholder.com/50x30/FFFFFF/6D4169?text=VISA" alt="Visa">
+                        <img src="https://via.placeholder.com/50x30/FFFFFF/6D4169?text=MC" alt="Mastercard">
+                        <img src="https://via.placeholder.com/50x30/FFFFFF/6D4169?text=AMEX" alt="American Express">
+                        <img src="https://via.placeholder.com/50x30/FFFFFF/6D4169?text=PayPal" alt="PayPal">
+                    </div>
+                </div>
             </div>
+            
             <div class="copyright">
-                <p>&copy; 2023 Bordeaux Pet Sitting - Tous droits réservés</p>
+                <p>&copy; 2023 Romalyn's Ube. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
-    <script>
-        // Menu mobile
-        document.querySelector('.mobile-menu').addEventListener('click', function() {
-            document.querySelector('nav ul').classList.toggle('show');
-        });
-
-        // Animation douce pour les ancres
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 </body>
 </html>
